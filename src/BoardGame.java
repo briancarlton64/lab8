@@ -17,7 +17,7 @@ public class BoardGame {
 	}
 	public boolean addPlayer(String playerName,GamePiece gamePiece,Location initialLocation) {
 		for (Entry<String, GamePiece> entry : playerPieces.entrySet()) {
-			if(entry.getKey().equals(playerName))
+			if(entry.getValue().equals(gamePiece))
 			{
 				return false;
 			}
