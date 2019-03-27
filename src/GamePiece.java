@@ -31,7 +31,7 @@ public enum GamePiece {
 	 * @param b
 	 * @return
 	 */
-	public GamePiece movesFirst(GamePiece a, GamePiece b)
+	public static GamePiece movesFirst(GamePiece a, GamePiece b)
 	{
 		if(b.priority<a.priority) {
 			return b;
