@@ -27,9 +27,9 @@ public enum GamePiece {
 	/**
 	 * Methods that compares the priority of two GamePieces to determine
 	 * which one would move first (lesser priority moving first.)
-	 * @param a
-	 * @param b
-	 * @return
+	 * @param a one piece to move
+	 * @param b the other piece to move
+	 * @return the piece that moves first
 	 */
 	public static GamePiece movesFirst(GamePiece a, GamePiece b)
 	{
@@ -40,7 +40,7 @@ public enum GamePiece {
 	}
 	@Override
 	public String toString() {
-		return String.format("%s: a %s %s with priority %d",super.toString() , appearance.getColor(), appearance.getShape(), priority);
+		return String.format("%s: a %s %s with priority %d",super.toString() , appearance.getColor().toString(), appearance.getShape(), priority);
 	}
 
 }
