@@ -14,13 +14,13 @@ public enum Color {
 		this.g = g;
 		this.b = b;
 	}
-	public int getR(){
-		return this.r;
+	public int getB() {
+		return this.b;
 	}
 	public int getG() {
 		return this.g;
 	}
-	public int getB() {
-		return this.b;
+	public int getR(){
+		return this.r;
 	}
 }

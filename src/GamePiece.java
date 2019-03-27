@@ -27,6 +27,7 @@ public enum GamePiece {
 		}
 		return a;
 	}
+	@Override
 	public String toString() {
 		return String.format("%s: a %s %s with priority %d",super.toString() , appearance.getColor(), appearance.getShape(), priority);
 	}

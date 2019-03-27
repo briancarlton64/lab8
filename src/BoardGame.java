@@ -26,8 +26,52 @@ public class BoardGame {
 		playerLocations.put(playerName, initialLocation);
 		return true;
 	}
+	public ArrayList<GamePiece> getGamePiecesAtLocation(Location loc) {
+		ArrayList<GamePiece> str = new ArrayList<>();
+		for (Entry<String, Location> entry : playerLocations.entrySet()) {
+			if(entry.getValue().equals(loc))
+			{
+				str.add(playerPieces.get(entry.getKey()));
+			}
+		}
+		return str;
+	}
 	public GamePiece getPlayerGamePiece(String playerName) {
 		return playerPieces.get(playerName);
+	}
+	public Set<Location> getPlayerLocations() {
+		Set<Location> set = new HashSet<>();
+		for (Entry<String, Location> entry : playerLocations.entrySet()) {
+			set.add(entry.getValue());
+		}
+		return set;
+	}
+	public Set<GamePiece> getPlayerPieces() {
+		Set<GamePiece> set = new HashSet<>();
+		for (Entry<String, GamePiece> entry : playerPieces.entrySet()) {
+			set.add(entry.getValue());
+		}
+		return set;
+	}
+	public Set<String> getPlayers() {
+		Set<String> set = new HashSet<>();
+		for (Entry<String, GamePiece> entry : playerPieces.entrySet()) {
+			set.add(entry.getKey());
+		}
+		return set;
+	}
+	public ArrayList<String> getPlayersAtLocation(Location loc) {
+		ArrayList<String> str = new ArrayList<>();
+		for (Entry<String, Location> entry : playerLocations.entrySet()) {
+			if(entry.getValue().equals(loc))
+			{
+				str.add(entry.getKey());
+			}
+		}
+		return str;
+	}
+	public Location getPlayersLocation(String player) {
+		return playerLocations.get(player);
 	}
 	public String getPlayerWithGamePiece(GamePiece gamePiece) {
 		for (Entry<String, GamePiece> entry : playerPieces.entrySet()) {
@@ -55,49 +99,5 @@ public class BoardGame {
 			playerLocations.replace(players[i], newLocations[i]);
 		}
 		return players;
-	}
-	public Location getPlayersLocation(String player) {
-		return playerLocations.get(player);
-	}
-	public ArrayList<String> getPlayersAtLocation(Location loc) {
-		ArrayList<String> str = new ArrayList<>();
-		for (Entry<String, Location> entry : playerLocations.entrySet()) {
-			if(entry.getValue().equals(loc))
-			{
-				str.add(entry.getKey());
-			}
-		}
-		return str;
-	}
-	public ArrayList<GamePiece> getGamePiecesAtLocation(Location loc) {
-		ArrayList<GamePiece> str = new ArrayList<>();
-		for (Entry<String, Location> entry : playerLocations.entrySet()) {
-			if(entry.getValue().equals(loc))
-			{
-				str.add(playerPieces.get(entry.getKey()));
-			}
-		}
-		return str;
-	}
-	public Set<String> getPlayers() {
-		Set<String> set = new HashSet<>();
-		for (Entry<String, GamePiece> entry : playerPieces.entrySet()) {
-			set.add(entry.getKey());
-		}
-		return set;
-	}
-	public Set<Location> getPlayerLocations() {
-		Set<Location> set = new HashSet<>();
-		for (Entry<String, Location> entry : playerLocations.entrySet()) {
-			set.add(entry.getValue());
-		}
-		return set;
-	}
-	public Set<GamePiece> getPlayerPieces() {
-		Set<GamePiece> set = new HashSet<>();
-		for (Entry<String, GamePiece> entry : playerPieces.entrySet()) {
-			set.add(entry.getValue());
-		}
-		return set;
 	}
 }
