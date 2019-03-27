@@ -1,4 +1,8 @@
-
+/**
+ * An enum representing all possible locations, specifically for a GamePiece.
+ * @author Brian
+ *
+ */
 public enum Location {
 	KITCHEN,
 	CONSERVATORY,

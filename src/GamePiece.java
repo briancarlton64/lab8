@@ -1,4 +1,8 @@
-
+/**
+ * An enum representing all possible GamePieces, their appearances (GamePieceAppearance), and their priority.)
+ * @author Brian
+ *
+ */
 public enum GamePiece {
 	RED_RACER(new GamePieceAppearance(Color.RED, Shape.RACECAR), 0),
 	BLUE_RACER(new GamePieceAppearance(Color.BLUE, Shape.RACECAR), 2),
@@ -20,6 +24,13 @@ public enum GamePiece {
 	public Shape getShape() {
 		return appearance.getShape();
 	}
+	/**
+	 * Methods that compares the priority of two GamePieces to determine
+	 * which one would move first (lesser priority moving first.)
+	 * @param a
+	 * @param b
+	 * @return
+	 */
 	public GamePiece movesFirst(GamePiece a, GamePiece b)
 	{
 		if(b.priority<a.priority) {

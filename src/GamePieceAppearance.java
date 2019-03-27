@@ -1,4 +1,8 @@
-
+/**
+ * A class that aggregates a Color and Shape enum to describe appearance.
+ * @author Brian
+ *
+ */
 public class GamePieceAppearance {
 	private Color color;
 	private Shape shape;

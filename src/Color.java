@@ -1,4 +1,8 @@
-
+/**
+ * A enum representing all possible colors, specifically for a GamePiece.
+ * @author Brian
+ *
+ */
 public enum Color {
 	RED(255,0,0),
 	GREEN(0,255,0),
