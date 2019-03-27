@@ -1,5 +1,5 @@
 /**
- * A enum representing all possible colors, specifically for a GamePiece.
+ * A enum representing all possible colors, specifically for a GamePiece. Aggregated along with Shape to describe a GamePieceAppearance.
  * @author Brian
  *
  */
